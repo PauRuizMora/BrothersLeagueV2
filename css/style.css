@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Mangonel;
+  src: url(../fonts/Mangonel.ttf);
+}
+body {
+  background-color: white;
+  font-family: 'Mangonel';
+}
+/**ALIGN THE PILLS TO THE CENTER**/
+.container {
+    justify-content: center;
+}
+/**ALL THE PILLS**/
+.card{
+  width: 93%;
+  height: 150px;
+  margin: 10px;
+  border-radius: 30px;
+  background-size: cover;
+}
+/**TAMAÑO DE TODAS LAS FOTOS
+.card-image{
+  height: 150px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 30px 30px 0 0;
+}**/
+/**VOLLEYBALL**/
+.sport-volleyball{
+  background-image: url('../volleyball/Volleyball.png');
+  padding: 10px;
+}
+.sport-football{
+  background-image: url('../football/Football.png');
+  padding: 10px;
+}
+.sport-basketball{
+  background-image: url('../basketball/Basketball.png');
+  padding: 10px;
+}
+.sport-cricket{
+  background-image: url('../cricket/Cricket.png');
+  padding: 10px;
+}
+.bottom-menu{
+  background-color: rgb(69, 154, 40);
+  border-radius: 30px;
+  width: 93%;
+  position: fixed;
+  margin: 10px;
+  bottom: 10px;
+  color: white;
+  
+}
+h1{
+  color: gold;
+}
+p{
+  color: white;
+}
