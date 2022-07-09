@@ -8,30 +8,46 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <section class="container">
-        <div class="card sport-volleyball">
-            <h1>Volleyball</h1>
-            <p>In Hyde Park</p>
+    <form class="password-form">
+        <div class="form-body">
+            <label for="password">Please Enter the password to login</label>
+            <span class="error-txt"></span>
+            <div class="pass-checkbox">
+                <input type="password" id="password" class="form-pass"/>
+                <input type="checkbox" id="checkbox" class="form-check"/>
+            </div>
+            <div class="submit-div">
+                <button class="pass-btn">Enter</button>
+            </div>
         </div>
-        <div class="card sport-football">
-            <div class="card-image"></div>
-            <h1>Football</h1>
-            <p>In Shepherds Bush<br> Not opened Yet</p>
-        </div>
-        <div class="card sport-basketball">
-            <div class="card-image"></div>
-            <h1>Basketball</h1>
-            <p>In Torquay Street<br> Not opened Yet</p>
-        </div>
-        <div class="card sport-cricket">
-            <div class="card-image"></div>
-            <h1>Cricket</h1>
-            <p>In Carlisle Park<br> Not opened Yet</p>
-        </div>
-    </section>
-        <div class="bottom-menu">
-            <div class=""></div>
-            <h1>.</h1>
-        </div>
+    </form>
+    <div class="password-protected">
+        <section class="container">
+            <div class="card sport-volleyball">
+                <h1>Volleyball</h1>
+                <p>In Hyde Park</p>
+            </div>
+            <div class="card sport-football">
+                <div class="card-image"></div>
+                <h1>Football</h1>
+                <p>In Shepherds Bush<br> Not opened Yet</p>
+            </div>
+            <div class="card sport-basketball">
+                <div class="card-image"></div>
+                <h1>Basketball</h1>
+                <p>In Torquay Street<br> Not opened Yet</p>
+            </div>
+            <div class="card sport-cricket">
+                <div class="card-image"></div>
+                <h1>Cricket</h1>
+                <p>In Carlisle Park<br> Not opened Yet</p>
+            </div>
+        </section>
+            <div class="bottom-menu">
+                <div class=""></div>
+                <h1>.</h1>
+            </div>
+    </div>
+    <script src="index.js"/>
 </body>
 </html>

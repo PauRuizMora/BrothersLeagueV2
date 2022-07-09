@@ -2,20 +2,28 @@
   font-family: Mangonel;
   src: url(../fonts/Mangonel.ttf);
 }
+*{
+  box-sizing: border-box;
+}
 body {
   background-color: white;
   font-family: 'Mangonel';
 }
 /**ALIGN THE PILLS TO THE CENTER**/
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 /**ALL THE PILLS**/
 .card{
   width: 93%;
-  height: 150px;
+  max-width: 700px;
+  height: 120px;
   margin: 10px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-size: cover;
 }
 /**TAMAÑO DE TODAS LAS FOTOS
@@ -57,4 +65,74 @@ h1{
 }
 p{
   color: white;
+}
+
+
+.password-form{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.password-form .form-body{
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+.password-form label{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.pass-checkbox{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.form-pass{
+  width: 300px;
+  padding: 10px;
+}
+
+.form-pass:focus{
+  outline: none;
+}
+input.form-check {
+  display: inline-block;
+  margin: auto 0;
+}
+
+.password-protected{
+  display: none;
+}
+
+.submit-div{
+  margin: 20px auto;
+}
+.pass-btn{
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 0;
+  border: 1px solid rgb(68, 90, 29);
+}
+
+.no-show{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.error-txt{
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 5px;
 }
