@@ -20,26 +20,35 @@ const togglePasswordVisibility = ()=> {
     }
 }
 
+let timeInMs = 60000
+let timeInMins = 1
 
 const handleShowPage = (e) => {
     e.preventDefault()
     e.stopPropagation()
+    e.stopImmediatePropagation()
     const attemptsRemaining = getStorageItem(attemptsKey)
     const pass = passInput.value
-    if (pass === 'password123' && attemptsRemaining > 1) {
-        form.classList.add('no-show')
-        mainPage.classList.add('show')
-    } else {
-        if (attemptsRemaining > 1) {          
-            localStorage.setItem(attemptsKey, attemptsRemaining - 1)
-            errorTxt.textContent = `sorry, you have ${attemptsRemaining-1} attempts left`
+    if (pass.length) {        
+        if (pass.trim() === 'password123' && attemptsRemaining > 1) {
+            form.classList.add('no-show')
+            mainPage.classList.add('show')
         } else {
-            errorTxt.textContent = `sorry, you have to wait 2 minuites to try again.`
-            setTimeout(() => {
-                localStorage.setItem(attemptsKey, 8)
-                console.log('done')
-            },12000)
+            if (attemptsRemaining > 1) {          
+                localStorage.setItem(attemptsKey, attemptsRemaining - 1)
+                errorTxt.textContent = `sorry, you have ${attemptsRemaining-1} attempts left`
+            } else {
+                errorTxt.textContent = `sorry, you have to wait ${timeInMins} minuites to try again.`
+                setTimeout(() => {
+                    localStorage.setItem(attemptsKey, 8)
+                    console.log('done')
+                    timeInMins *= 2
+                    timeInMs*=2
+                }, timeInMs)
+            }
         }
+    } else {
+        errorTxt.textContent ='please input a value'
     }
 }
 
